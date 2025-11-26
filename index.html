@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="ms">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Calculator Gaji UiTM</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header class="header">
+    <h1>Calculator Gaji UiTM</h1>
+</header>
+
+<div class="container">
+
+    <!-- Maklumat Calon -->
+    <div class="card">
+        <h3>Maklumat Calon (Boleh Diisi)</h3>
+        <label>Gaji Pokok</label>
+        <input type="number" id="gajiPokok" value="4000">
+
+        <label>KGT</label>
+        <input type="number" id="kgt" value="145">
+
+        <h3>Elaun</h3>
+        <label>ITKA</label>
+        <input type="number" id="itka" value="160">
+
+        <label>ITP</label>
+        <input type="number" id="itp" value="300">
+
+        <label>Telah terima KGT tahun ini?</label>
+        <select id="telahKgt">
+            <option value="YA">YA</option>
+            <option value="TIDAK">TIDAK</option>
+        </select>
+    </div>
+
+    <!-- Maklumat UiTM -->
+    <div class="card">
+        <h3>Maklumat UiTM (Tidak Boleh Diubah)</h3>
+        <label>BISH / BIW</label>
+        <input type="number" id="bish" value="350" readonly>
+
+        <label>BIPK</label>
+        <input type="number" id="bipk" value="600" readonly>
+    </div>
+
+    <button id="kiraBtn">Kira Gaji</button>
+
+    <div class="output" id="output"></div>
+</div>
+
+<!-- Footer -->
+<footer class="footer">
+    &copy; 2025 UiTM | Calculator Gaji | Dibangunkan oleh Staff IT
+</footer>
+
+<script>
+document.getElementById('kiraBtn').addEventListener('click', function() {
+    const gajiPokok = parseFloat(document.getElementById('gajiPokok').value) || 0;
+    const kgt = parseFloat(document.getElementById('kgt').value) || 0;
+    const itka = parseFloat(document.getElementById('itka').value) || 0;
+    const itp = parseFloat(document.getElementById('itp').value) || 0;
+    const bish = parseFloat(document.getElementById('bish').value) || 0;
+    const bipk = parseFloat(document.getElementById('bipk').value) || 0;
+    const telah = document.getElementById('telahKgt').value;
+
+    const kgtTahunSemasa = (telah === "YA") ? 0 : kgt;
+    const kgtTambahan = kgt;
+    const jumlahGaji = gajiPokok + kgtTahunSemasa + kgtTambahan;
+    const elaun = itka + itp + bish + bipk;
+    const jumlahKasar = jumlahGaji + elaun;
+
+    document.getElementById('output').innerHTML = `
+        <strong>Gaji Akhir:</strong> RM ${gajiPokok.toFixed(2)}<br>
+        <strong>KGT Tahun Semasa:</strong> RM ${kgtTahunSemasa.toFixed(2)}<br>
+        <strong>KGT Tambahan:</strong> RM ${kgtTambahan.toFixed(2)}<br>
+        <strong>Jumlah Gaji (Ditawarkan):</strong> RM ${jumlahGaji.toFixed(2)}<br>
+        <strong>Elaun (Ditawarkan):</strong> RM ${elaun.toFixed(2)}<br>
+        <strong>Jumlah Pendapatan Kasar:</strong> RM ${jumlahKasar.toFixed(2)}
+    `;
+});
+</script>
+
+</body>
+</html>
