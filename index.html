@@ -9,7 +9,8 @@
 <body>
 
 <header class="custom-header">
-  <h1>Calculator Gaji — UiTM / Swasta</h1>
+  <h1>Calculator Gaji Bagi Jawatan Jururawat U5</h1>
+  <h1>dan Penolong Pegawai Perubatan U5</h1>
   <p>Pilih jenis kiraan (Awam atau Swasta) di bulatan di bawah</p>
 </header>
 
@@ -133,11 +134,15 @@
     </div>
   </div>
 
-  <!-- Experience blocks -->
-  <div style="margin-top:10px" class="small">Isi sehingga 4 pengalaman. Sistem akan kira tempoh hari → tahun → 'Boleh Ambil Kira' secara automatik.</div>
-  <div id="expList" style="margin-top:12px">
-    <!-- JS akan generate 4 blok pengalaman di sini -->
-  </div>
+<!-- Experience blocks -->
+<div style="margin-top:10px" class="small">
+  Isi sehingga 4 pengalaman. Sistem akan kira tempoh hari → tahun → 'Boleh Ambil Kira' secara automatik.
+</div>
+
+<div id="expList" style="margin-top:12px">
+  <!-- JS akan create 4 experience blocks -->
+</div>
+
 
   <!-- Elaun tetap -->
   <div class="h3" style="margin-top:10px">Elaun (Tetap — tidak boleh ubah)</div>
@@ -194,11 +199,19 @@
 function createExpBlocks(){
   const container = document.getElementById('expList');
   container.innerHTML = '';
-  for(let i=1;i<=4;i++){
+  for(let i = 1; i <= 4; i++){
     const div = document.createElement('div');
     div.className = 'exp-box';
     div.innerHTML = `
       <strong>Pengalaman ${i}</strong>
+
+      <div class="row" style="margin-top:8px">
+        <div class="col">
+          <label>Organisasi</label>
+          <input type="text" id="exp_org_${i}" placeholder="Contoh: Kementerian Kesihatan Malaysia">
+        </div>
+      </div>
+
       <div class="row" style="margin-top:8px">
         <div class="col">
           <label>Tarikh Mula</label>
@@ -209,7 +222,13 @@ function createExpBlocks(){
           <input type="date" id="exp_end_${i}">
         </div>
       </div>
-      <div class="small">Tempoh: <span id="exp_days_${i}">0</span> hari — <span id="exp_years_${i}">0.00</span> tahun — Boleh ambil kira: <span id="exp_floor_${i}">0</span></div>
+
+      <div class="small">
+        Tempoh: 
+        <span id="exp_days_${i}">0</span> hari — 
+        <span id="exp_years_${i}">0.00</span> tahun — 
+        Boleh ambil kira: <span id="exp_floor_${i}">0</span>
+      </div>
     `;
     container.appendChild(div);
 
@@ -311,17 +330,20 @@ function computeSwasta(){
   const BISH = parseFloat(document.getElementById('elaun_bish_sw').value) || 0;
   const BIPK = parseFloat(document.getElementById('elaun_bipk_sw').value) || 0;
   const totalElaun = ITKA + ITP + BISH + BIPK;
-
+  
   let totalFloorYears = 0;
   let details = [];
 
   for(let i=1;i<=4;i++){
+    const org = document.getElementById(`exp_org_${i}`).value || '-';
     const s = document.getElementById(`exp_start_${i}`).value;
     const e = document.getElementById(`exp_end_${i}`).value;
+
     const days = daysBetween(s,e);
     const years = days / 365;
     const floorY = Math.floor(years);
     totalFloorYears += floorY;
+
     details.push({i, days, years, floorY});
   }
 
@@ -333,8 +355,9 @@ function computeSwasta(){
 
   const rc = document.getElementById('resultContent');
   rc.innerHTML = '';
+
 rc.innerHTML += `<div class="item"><div class="label">Jawatan</div><div class="value">${document.getElementById('swastaJawatan').value || '-'}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">NamaOrganisasi</div><div class="value">${document.getElementById('swastaNamaOrganisasi').value || '-'}</div></div>`;
+  rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi</div><div class="value">${document.getElementById('swastaNamaOrganisasi').value || '-'}</div></div>`;
 
   details.forEach(d=>{
     rc.innerHTML += `<div class="item"><div class="label">Pengalaman ${d.i} (hari)</div><div class="value">${d.days}</div></div>`;
@@ -388,4 +411,3 @@ selectMode('awam');
 
 </body>
 </html>
-
