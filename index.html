@@ -129,7 +129,7 @@
 
   <div class="row">
     <div class="col">
-      <label>Nama Organisasi</label>
+      <label>Nama Organisasi Kini</label>
       <input type="text" id="swastaNamaOrganisasi" placeholder="Contoh: Hospital Selayang">
     </div>
   </div>
@@ -207,7 +207,7 @@ function createExpBlocks(){
 
       <div class="row" style="margin-top:8px">
         <div class="col">
-          <label>Organisasi</label>
+          <label>Nama Organisasi</label>
           <input type="text" id="exp_org_${i}" placeholder="Contoh: Kementerian Kesihatan Malaysia">
         </div>
       </div>
@@ -274,6 +274,7 @@ function daysBetween(startStr, endStr){
 
 /* update single experience preview */
 function updateExpPreview(i){
+  const org = document.getElementById(`exp_org_${i}`).value || '-';
   const s = document.getElementById(`exp_start_${i}`).value;
   const e = document.getElementById(`exp_end_${i}`).value;
   const days = daysBetween(s,e);
@@ -318,7 +319,7 @@ function computeAwam(){
   rc.innerHTML += `<div class="item"><div class="label">KGT Tahun (Layak)</div><div class="value">RM ${kgtTahunan.toFixed(2)}</div></div>`;
   rc.innerHTML += `<div class="item"><div class="label">Gaji Akhir</div><div class="value">RM ${gajiAkhir.toFixed(2)}</div></div>`;
   rc.innerHTML += `<div class="item"><div class="label">Jumlah Elaun (ITKA+ITP+BISH+BIPK)</div><div class="value">RM ${totalElaun.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="total"><div>Total Kasar</div><div>RM ${kasar.toFixed(2)}</div></div>`;
+  rc.innerHTML += `<div class="total"><div>Jumlah Pendapatan Kasar</div><div>RM ${kasar.toFixed(2)}</div></div>`;
   document.querySelector('.result').scrollIntoView({behavior:'smooth', block:'center'});
 }
 
@@ -344,7 +345,7 @@ function computeSwasta(){
     const floorY = Math.floor(years);
     totalFloorYears += floorY;
 
-    details.push({i, days, years, floorY});
+    details.push({i, org, days, years, floorY});
   }
 
   const gajiPermulaan = 1974; // tetap
@@ -356,10 +357,11 @@ function computeSwasta(){
   const rc = document.getElementById('resultContent');
   rc.innerHTML = '';
 
-rc.innerHTML += `<div class="item"><div class="label">Jawatan</div><div class="value">${document.getElementById('swastaJawatan').value || '-'}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi</div><div class="value">${document.getElementById('swastaNamaOrganisasi').value || '-'}</div></div>`;
+  rc.innerHTML += `<div class="item"><div class="label">Jawatan</div><div class="value">${document.getElementById('swastaJawatan').value || '-'}</div></div>`;
+  rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi Kini</div><div class="value">${document.getElementById('swastaNamaOrganisasi').value || '-'}</div></div>`;
 
   details.forEach(d=>{
+    rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi ${d.i}</div><div class="value">${d.org}</div></div>`;
     rc.innerHTML += `<div class="item"><div class="label">Pengalaman ${d.i} (hari)</div><div class="value">${d.days}</div></div>`;
     rc.innerHTML += `<div class="item"><div class="label">Tahun (sebenar)</div><div class="value">${d.years.toFixed(2)}</div></div>`;
     rc.innerHTML += `<div class="item"><div class="label">Boleh Ambil Kira (tahun)</div><div class="value">${d.floorY}</div></div>`;
