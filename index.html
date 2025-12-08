@@ -29,8 +29,46 @@
     </div>
     </div>
 
-    <div class="main">
-    <div class="panel">
+
+  <!-- Button Petunjuk -->
+<button id="petunjukBtn" class="petunjuk-btn">?</button>
+
+<!-- Popup Petunjuk -->
+<div id="petunjukPopup" class="petunjuk-popup">
+      <h2 style="color: #5E2A84;">PETUNJUK</h2>
+    <table>
+      <tr>
+        <td class="left-col">ITKA</td>
+        <td class="right-col">IMBUHAN TETAP KHIDMAT AWAM</td>
+      </tr>
+      <tr>
+        <td class="left-col">ITK </td>
+        <td class="right-col">IMBUHAN TETAP KERAIAN</td>
+      </tr>
+      <tr>
+        <td class="left-col">BISH</td>
+        <td class="right-col">BANTUAN INSENTIF SARA HIDUP</td>
+      </tr>
+      <tr>
+        <td class="left-col">BIW</td>
+        <td class="right-col">BANTUAN INSENTIF WILAYAH</td>
+      </tr>
+      <tr>
+        <td class="left-col">BIPK</td>
+        <td class="right-col">BAYARAN INSENTIF PERKHIDMATAN KRITIKAL</td>
+      </tr>
+      <tr>
+        <td class="left-col">BIP</td>
+        <td class="right-col">BAYARAN INSENTIF PAKAR</td>
+      </tr>
+    </table>
+</div>
+ 
+    
+
+
+<div class="main">
+<div class="panel">
 
     <!-- Kotak Penerangan / Info -->
     <div class="info-box">
@@ -420,16 +458,21 @@
                 document.querySelector('.result').scrollIntoView({ behavior: 'smooth', block: 'center' });
             }
 
-            /* ===== Go Top Button ===== */
-            document.addEventListener("DOMContentLoaded", function () {
-                const goTopBtn = document.getElementById("goTopBtn");
-                window.addEventListener("scroll", function () {
-                    goTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
-                });
-                goTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: 'smooth' }));
-            });
-        </script>
+/* ===== Go Top Button ===== */
+document.addEventListener("DOMContentLoaded", function() {
+  const goTopBtn = document.getElementById("goTopBtn");
+  window.addEventListener("scroll", function() {
+    goTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+  });
+  goTopBtn.addEventListener("click", ()=>window.scrollTo({ top: 0, behavior: 'smooth' }));
+});
 
-        <button id="goTopBtn" title="Go to Top">↑</button>
-    </body>
-    </html>
+document.getElementById("petunjukBtn").onclick = function() {
+    const box = document.getElementById("petunjukPopup");
+    box.style.display = (box.style.display === "block") ? "none" : "block";
+};
+</script>
+
+<button id="goTopBtn" title="Go to Top">↑</button>
+</body>
+</html>
