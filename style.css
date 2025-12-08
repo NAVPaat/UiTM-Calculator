@@ -225,10 +225,11 @@ input[readonly] { background:#f6f6f8; color:#333; }
     padding: 10px;
 }
 
+
 /* Box untuk title Ringkasan */
 .result-title-box {
     background: #ffffff;
-    padding: 12px 16px;
+    padding: 10px 14px;
     border-radius: 10px;
     color: #5E2A84;
     font-size: 20px;
@@ -236,4 +237,90 @@ input[readonly] { background:#f6f6f8; color:#333; }
     margin-bottom: 15px;
     box-shadow: 0 2px 6px rgba(0,0,0,0.1);
 }
+
+
+/* BUTTON PETUNJUK */
+.petunjuk-btn {
+    position: fixed;
+    bottom: 140px;
+    right: 26px;
+    background: #5E2A84;
+    color: white;
+    width: 50px;
+    height: 50px;
+    font-size: 24px;
+    border: none;
+    border-radius: 50%;
+    cursor: pointer;
+    box-shadow: 0 6px 15px rgba(0,0,0,0.25);
+    transition: all 0.35s ease;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Hover: tukar shape + keluarkan perkataan */
+.petunjuk-btn:hover {
+    width: 140px;
+    border-radius: 40px;
+    background: var(--gold);
+    color: #111;
+}
+
+/* Tukar simbol kepada perkataan */
+.petunjuk-btn:hover::after {
+    content: "PETUNJUK";
+    font-size: 16px;
+    font-weight: bold;
+}
+
+/* Hilangkan simbol bila hover */
+.petunjuk-btn:hover {
+    font-size: 0;
+}
+
+/* POPUP */
+.petunjuk-popup {
+    display: none;
+    position: fixed;
+    bottom: 200px;
+    right: 20px;
+    background: white;
+    padding: 12px;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.25);
+    z-index: 999;
+    animation: fadeIn 0.35s ease;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+.petunjuk-popup table {
+    border-collapse: collapse;
+    width: 340px;
+}
+
+.petunjuk-popup td {
+    border: 1px solid #888;
+    padding: 6px;
+    text-align: left;
+}
+
+/* LEFT COLUMN kecil */
+.left-col {
+  width: 70px;
+  font-weight: bold;
+  color: white;
+  background: #5E2A84;
+}
+
+/* RIGHT COLUMN besar */
+.right-col {
+  width: auto;
+}
+
 
