@@ -35,7 +35,7 @@ body {
 
 .custom-header h1 {
   margin: 0;
-  font-size: 40px;
+  font-size: 30px;
 }
 
 .custom-header p {
@@ -322,5 +322,6 @@ input[readonly] { background:#f6f6f8; color:#333; }
 .right-col {
   width: auto;
 }
+
 
 
