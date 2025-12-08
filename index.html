@@ -3,27 +3,34 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Calculator Gaji — Awam & Swasta</title>
+  <title>Calculator Gaji — Awam</title>
   <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<header class="custom-header">
-  <h1>Calculator Gaji Bagi Jawatan Jururawat U5</h1>
-  <h1>dan Penolong Pegawai Perubatan U5</h1>
-  <p>Pilih jenis kiraan (Awam atau Swasta) di bulatan di bawah</p>
-</header>
-
+    <header class="custom-header">
+        <h1>CALON BERKHIDMAT DI KERAJAAN PERSEKUTUAN</h1>
+        <h1>/ KERAJAAN NEGERI / PIHAK BERKUASA BADAN BERKANUN /</h1>
+        <h1>PIHAK BERKUASA TEMPATAN</h1>
+        <p>Pilih jenis kiraan (Awam atau Swasta) di bulatan di bawah</p>
+    </header>
 
 <br><br>
 
-  <!-- NAV CIRCLES (centered under header) -->
-  <div class="navwrap">
-    <div class="nav">
-      <div id="navAwam" class="circle active" title="Kiraan Awam" onclick="selectMode('awam')">AWAM</div>
-      <div id="navSwasta" class="circle inactive" title="Kiraan Swasta" onclick="selectMode('swasta')">SWASTA</div>
-    </div>
+<!-- NAVIGATION -->
+<div class="navwrap">
+  <div class="nav">
+    <a href="index.html">
+      <div class="circle active">AWAM</div>
+    </a>
+    <a href="swasta.html">
+      <div class="circle inactive">SWASTA</div>
+    </a>
   </div>
+</div>
+
+<div class="main">
+  <div class="panel">
 
 <!-- Kotak Penerangan / Info -->
 <div class="info-box">
@@ -33,383 +40,399 @@
 </div>
 
 
-  <!-- MAIN -->
-  <div class="main">
+            <!-- Dropdown Jawatan -->
+            <center>
+                <div class="dropdown-wrapper">
+                    <label>Pilih Jawatan Awam</label>
+                    <div class="custom-dropdown">
+                        <select id="jawatan_awam">
+                            <option value="">Pilih Jawatan Awam</option>
+                            <option value="Juruteknik Perubatan U1">JURUTEKNIK PERUBATAN U1</option>
+                            <option value="Pembantu Perawatan Kesihatan U1">PEMBANTU PEMBEDAHAN PERGIGIAN U1</option>
+                            <option value="Pembantu Pembedahan Pergigian U1">PEMBANTU PEMBEDAHAN PERGIGIAN U1</option>
+                            <option value="Penolong Pegawai Kesihatan Persekitaran U5">PENOLONG PEGAWAI KESIHATAN PERSEKITARAN U5</option>
+                            <option value="Juruteknologi Makmal Perubatan U5">JURUTEKNOLOGI MAKMAL PERUBATAN U5</option>
+                            <option value="Penolong Pegawai Farmasi U5">PENOLONG PEGAWAI FARMASI U5</option>
+                            <option value="Juru X-Tray U5">JURU X-TRAY U5</option>
+                            <option value="Jurupulih Perubatan U5 - Diploma Fisioterapi">JURUPULIH PERUBATAN U5 - DIPLOMA FISIOTERAPI</option>
+                            <option value="Jurupulih Perubatan U5 - DLKM">JURUPULIH PERUBATAN U5 - DLKM</option>
+                            <option value="Jurupulih Perubatan U5 - DKM">JURUPULIH PERUBATAN U5 - DKM</option>
+                            <option value="Penolong Pegawai Perubatan U5">PENOLONG PEGAWAI PERUBATAN U5</option>
+                            <option value="Jururawat U5">JURURAWAT U5</option>
+                            <option value="Penolong Pegawai Perubatan U9">PENOLONG PEGAWAI PERUBATAN U9</option>
+                            <option value="Pegawai kesihatan Persekitaran U9">PEGAWAI KESIHATAN PERSEKITARAN U9</option>
+                            <option value="Pegawai Pemulihan Perubatan U9">PEGAWAI PEMULIHAN PERUBATAN U9</option>
+                            <option value="Pegawai Dietetik U9">PEGAWAI DIETETIK U9</option>
+                            <option value="Pegawai Optometri U9">PEGAWAI OPTOMETRI U9</option>
+                            <option value="Juru X-Tray U9">JURU X-TRAY U9</option>
+                            <option value="Jururawat U9">JURURAWAT U9</option>
+                            <option value="Pegawai Farmasi U9">PEGAWAI FARMASI U9</option>
+                            <option value="Pegawai Pergigian UG9">PEGAWAI PERGIGIAN UG9</option>
+                            <option value="Pegawai Perubatan UD10">PEGAWAI PERUBATAN UD10</option>
+                            <option value="Pegawai Perubatan UD12">PEGAWAI PERUBATAN UD12</option>
+                            <option value="Pegawai Perubatan Pakar UD13">PEGAWAI PERUBATAN Pakar UD13</option>
+                            <option value="Pegawai Perubatan Pakar UD14">PEGAWAI PERUBATAN Pakar UD14</option>
+                            <option value="Pegawai Perubatan Pakar UD15">PEGAWAI PERUBATAN Pakar UD15</option>
+                        </select>
+                    </div>
+                </div>
+            </center>
 
-    <!-- LEFT: Forms -->
-    <div class="panel">
+            <div id="formAwam">
+                <div class="row">
+                    <div class="col">
+                        <label>Jawatan Kini</label>
+                        <input type="text" id="awamJawatan" readonly>
+                    </div>
+                    <div class="col">
+                        <label>Gaji Pokok (RM)</label>
+                        <input type="number" id="awamGajiPokok">
+                    </div>
+                </div>
 
-      <!-- AWAM FORM -->
-      <div id="formAwam">
-        <div class="h3">Maklumat Calon</div>
-        <div class="row">
-          <div class="col">
-            <label>Jawatan Kini</label>
-            <input type="text" id="awamJawatan" placeholder="Contoh: Kerani">
-          </div>
-          <div class="col">
-            <label>Jabatan Kini</label>
-            <input type="text" id="awamJabatan" placeholder="Contoh: JPN">
-          </div>
+                <div class="row">
+                    <div class="col">
+                        <label>ITKA</label>
+                        <input type="number" id="elaun_itka_awam" readonly>
+                    </div>
+                    <div class="col">
+                        <label>ITK</label>
+                        <input type="number" id="elaun_itk_awam" readonly>
+                    </div>
+                    <div class="col">
+                        <label>ITP</label>
+                        <input type="number" id="elaun_itp_awam" readonly>
+                    </div> 
+                </div>    
+
+                <div class="row">
+                    <div class="col">
+                        <label>BISH / BIW</label>
+                        <input type="number" id="elaun_bish_awam" readonly>
+                    </div>
+                    <div class="col">
+                        <label>BIPK</label>
+                        <input type="number" id="elaun_bipk_awam" readonly>
+                    </div>
+                    <div class="col">
+                        <label>BIP</label>
+                        <input type="number" id="elaun_bip_awam" readonly>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>KGT (Tahun Ini)</label>
+                        <input type="number" id="kgt_tahun_ini" readonly>
+                    </div>
+                    <div class="col">
+                        <label>KGT Tambahan</label>
+                        <input type="number" id="kgt_tambahan" readonly>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label>Telah Terima PGT Tahun Ini?</label>
+                        <select id="awamTelah">
+                            <option value="YA">YA</option>
+                            <option value="TIDAK" selected>TIDAK</option>
+                        </select>
+                    </div>
+
+                    <div class="col">
+                        <label>Tarikh PGT</label>
+                        <select id="awamPGT">
+                            <option value="Jan">Januari</option>
+                            <option value="Apr">April</option>
+                            <option value="Jul">Julai</option>
+                            <option value="Oct">Oktober</option>
+                        </select>
+                    </div>
+                </div>
+
+                <button class="btn" onclick="computeAwam()">KIRA GAJI AWAM</button>
+            </div>
+
         </div>
 
-        <div class="row">
-          <div class="col">
-            <label>Gaji Pokok (RM)</label>
-            <input type="number" id="awamGajiPokok" value="4000">
-          </div>
-          
-
-          <div class="col">
-            <label>Telah terima PGT tahun ini?</label>
-            <select id="awamTelah">
-              <option value="YA">YA</option>
-              <option value="TIDAK" selected>TIDAK</option>
-            </select>
-          </div>
-
-           <div class="col">
-    <label>Tarikh Pergerakan Gaji Tahunan (PGT)</label>
-    <select id="awamPGT">
-      <option value="Jan">Januari</option>
-      <option value="Apr">April</option>
-      <option value="Jul">Julai</option>
-      <option value="Oct">Oktober</option>
-    </select>
-  </div>
+        <!-- RIGHT: Result -->
+        <div class="result panel">
+<center>
+<div class="result-title-box">
+  Ringkasan Keputusan
+</div></center>
+            <div id="resultContent"></div>
+            <div id="disclaimer" class="info-box small" style="margin-top:10px;">
+                <strong>PERHATIAN:</strong> Jumlah yang dipaparkan hanyalah sebagai rujukan dan panduan sahaja.
+                Ketetapan sebenar adalah berdasarkan semakan dokumen dan pertimbangan pihak UiTM.
+            </div>
         </div>
-
-        <div class="h3" style="margin-top:12px">Elaun (Layak Terima)</div>
-        <div class="row">
-          <div class="col">
-            <label>ITKA</label>
-            <input type="number" id="elaun_itka_awam" value="160" readonly>
-          </div>
-          <div class="col">
-            <label>ITP</label>
-            <input type="number" id="elaun_itp_awam" value="300" readonly>
-          </div>
-        </div>
-        <div class="row" style="margin-top:6px">
-          <div class="col">
-            <label>BISH / BIW</label>
-            <input type="number" id="elaun_bish_awam" value="300" readonly>
-          </div>
-          <div class="col">
-            <label>BIPK</label>
-            <input type="number" id="elaun_bipk_awam" value="150" readonly>
-          </div>
-        </div>
-
-        <button class="btn" onclick="computeAwam()">KIRA GAJI AWAM</button>
-      </div>
-
- <div id="formSwasta" style="display:none">
-  
-  <!-- Kotak info tetap Swasta -->
-  <div class="info-box">
-    <h3>Maklumat Jawatan Dipohon</h3>
-    <div class="fixed-info">
-      <p><strong>Jawatan:</strong> Jururawat</p>
-      <p><strong>Gaji Min (RM):</strong> 1,974.00</p>
-      <p><strong>Gaji Max (RM):</strong> 6,620.00</p>
-      <p><strong>PGT:</strong> 145.00</p>
     </div>
-    <p class="small">Calon hanya perlu isi Jabatan dan pengalaman (Tarikh Mula & Tamat) sahaja. Semua maklumat di atas adalah tetap dan tidak boleh diubah.</p>
-  </div>
-
-  <!-- Jabatan input -->
-    <div class="h3">Maklumat Calon</div>
-  <div class="row">
-    <div class="col">
-      <label>Jawatan</label>
-      <input type="text" id="swastaJawatan" placeholder="Contoh: Jururawat">
     </div>
-  </div>
-
-  <div class="row">
-    <div class="col">
-      <label>Nama Organisasi Kini</label>
-      <input type="text" id="swastaNamaOrganisasi" placeholder="Contoh: Hospital Selayang">
-    </div>
-  </div>
-
-<!-- Experience blocks -->
-<div style="margin-top:10px" class="small">
-  Isi sehingga 4 pengalaman. Sistem akan kira tempoh hari → tahun → 'Boleh Ambil Kira' secara automatik.
 </div>
-
-<div id="expList" style="margin-top:12px">
-  <!-- JS akan create 4 experience blocks -->
-</div>
-
-
-  <!-- Elaun tetap -->
-  <div class="h3" style="margin-top:10px">Elaun (Tetap — tidak boleh ubah)</div>
-  <div class="row">
-    <div class="col">
-      <label>ITKA</label>
-      <input type="number" id="elaun_itka_sw" value="160" readonly>
-    </div>
-    <div class="col">
-      <label>ITP</label>
-      <input type="number" id="elaun_itp_sw" value="300" readonly>
-    </div>
-  </div>
-  <div class="row" style="margin-top:6px">
-    <div class="col">
-      <label>BISH / BIW</label>
-      <input type="number" id="elaun_bish_sw" value="300" readonly>
-    </div>
-    <div class="col">
-      <label>BIPK</label>
-      <input type="number" id="elaun_bipk_sw" value="150" readonly>
-    </div>
-  </div>
-  <button class="btn" onclick="computeSwasta()">KIRA GAJI SWASTA</button>
-</div>
-
-
-    <!-- RIGHT: Result (Card B style) -->
-    <div class="result panel">
-      <h3>Ringkasan Keputusan</h3>
-
-      <div id="resultContent">
-        <div class="item"><div class="label">Status</div><br><div class="value">Sila pilih 'Awam' atau 'Swasta' dan tekan KIRA</div></div>
-      </div>
-<!-- Disclaimer -->
-  <div id="swastaDisclaimer" class="info-box small" style="display:none; margin-top:12px;">
-    <strong>PERHATIAN:</strong> Jumlah yang dipaparkan hanyalah sebagai rujukan dan panduan sahaja. Ketetapan sebenar adalah berdasarkan semakan dokumen dan pertimbangan pihak UiTM.
-  </div>
-    </div>
-
-  </div>
-  </div>
-
-<br><br>
+ <br><br>
 <footer class="custom-footer">
   <div class="footer-content">
     © 2025 HASA UiTM — SISTEM KIRAAN GAJI
+  </div>
 </footer>
 
-
-
 <script>
-/* ====== init experience blocks (4) for swasta ====== */
-function createExpBlocks(){
-  const container = document.getElementById('expList');
-  container.innerHTML = '';
-  for(let i = 1; i <= 4; i++){
-    const div = document.createElement('div');
-    div.className = 'exp-box';
-    div.innerHTML = `
-      <strong>Pengalaman ${i}</strong>
-
-      <div class="row" style="margin-top:8px">
-        <div class="col">
-          <label>Nama Organisasi</label>
-          <input type="text" id="exp_org_${i}" placeholder="Contoh: Kementerian Kesihatan Malaysia">
-        </div>
-      </div>
-
-      <div class="row" style="margin-top:8px">
-        <div class="col">
-          <label>Tarikh Mula</label>
-          <input type="date" id="exp_start_${i}">
-        </div>
-        <div class="col">
-          <label>Tarikh Tamat</label>
-          <input type="date" id="exp_end_${i}">
-        </div>
-      </div>
-
-      <div class="small">
-        Tempoh: 
-        <span id="exp_days_${i}">0</span> hari — 
-        <span id="exp_years_${i}">0.00</span> tahun — 
-        Boleh ambil kira: <span id="exp_floor_${i}">0</span>
-      </div>
-    `;
-    container.appendChild(div);
-
-    // attach listeners for live preview
-    const s = div.querySelector(`#exp_start_${i}`);
-    const e = div.querySelector(`#exp_end_${i}`);
-    [s,e].forEach(inp=>{
-      inp.addEventListener('change', ()=> updateExpPreview(i));
-    });
-  }
-}
-createExpBlocks();
-
-/* ====== nav selection ====== */
-function selectMode(mode){
-  const navA = document.getElementById('navAwam');
-  const navS = document.getElementById('navSwasta');
-  if(mode === 'awam'){
-    navA.classList.add('active'); navA.classList.remove('inactive');
-    navS.classList.remove('active'); navS.classList.add('inactive');
-    document.getElementById('formAwam').style.display = '';
-    document.getElementById('formSwasta').style.display = 'none';
-    clearResult();
-  } else {
-    navS.classList.add('active'); navS.classList.remove('inactive');
-    navA.classList.remove('active'); navA.classList.add('inactive');
-    document.getElementById('formAwam').style.display = 'none';
-    document.getElementById('formSwasta').style.display = '';
-    clearResult();
-  }
-}
-
-/* ===== utility: days between inclusive? use difference in ms -> floor days ===== */
-function daysBetween(startStr, endStr){
-  if(!startStr || !endStr) return 0;
-  const s = new Date(startStr);
-  const e = new Date(endStr);
-  if(e < s) return 0;
-  const diff = e.getTime() - s.getTime();
-  const days = Math.floor(diff / (1000*60*60*24));
-  return days;
-}
-
-/* update single experience preview */
-function updateExpPreview(i){
-  const org = document.getElementById(`exp_org_${i}`).value || '-';
-  const s = document.getElementById(`exp_start_${i}`).value;
-  const e = document.getElementById(`exp_end_${i}`).value;
-  const days = daysBetween(s,e);
-  const years = days / 365;
-  const floor = Math.floor(years);
-  document.getElementById(`exp_days_${i}`).textContent = days;
-  document.getElementById(`exp_years_${i}`).textContent = years.toFixed(2);
-  document.getElementById(`exp_floor_${i}`).textContent = floor;
-}
-
-/* clear result area */
-function clearResult(){
-  const rc = document.getElementById('resultContent');
-  rc.innerHTML = `<div class="item"><div class="label">Status</div><div class="value">Sila tekan butang KIRA untuk lihat keputusan.</div></div>`;
-}
-
-/* ====== compute Awam ====== */
-function computeAwam(){
-  const ITKA = parseFloat(document.getElementById('elaun_itka_awam').value) || 0;
-  const ITP  = parseFloat(document.getElementById('elaun_itp_awam').value) || 0;
-  const BISH = parseFloat(document.getElementById('elaun_bish_awam').value) || 0;
-  const BIPK = parseFloat(document.getElementById('elaun_bipk_awam').value) || 0;
-  const totalElaun = ITKA + ITP + BISH + BIPK;
-
-  const jawatan = document.getElementById('awamJawatan').value || '-';
-  const jabatan = document.getElementById('awamJabatan').value || '-';
-  const gajiPokok = parseFloat(document.getElementById('awamGajiPokok').value) || 0;
-  const telah = document.getElementById('awamTelah').value;
-  const pgt = document.getElementById('awamPGT').value; // ambil pilihan PGT
-
-  const kgtTahunan = (telah === 'YA') ? 0 : 145;
-  const gajiAkhir = gajiPokok + kgtTahunan;
-  const kasar = gajiAkhir + totalElaun;
-
-  const rc = document.getElementById('resultContent');
-  rc.innerHTML = '';
-  rc.innerHTML += `<div class="item"><div class="label">Jawatan</div><div class="value">${jawatan}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Jabatan</div><div class="value">${jabatan}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Gaji Pokok</div><div class="value">RM ${gajiPokok.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Telah Terima KGT Tahun Ini?</div><div class="value">${telah}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Tarikh PGT</div><div class="value">${pgt}</div></div>`; // tambah PGT di sini
-  rc.innerHTML += `<div class="item"><div class="label">KGT Tahun (Layak)</div><div class="value">RM ${kgtTahunan.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Gaji Akhir</div><div class="value">RM ${gajiAkhir.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Jumlah Elaun (ITKA+ITP+BISH+BIPK)</div><div class="value">RM ${totalElaun.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="total"><div>Jumlah Pendapatan Kasar</div><div>RM ${kasar.toFixed(2)}</div></div>`;
-  document.querySelector('.result').scrollIntoView({behavior:'smooth', block:'center'});
-}
-
-
-/* ====== compute Swasta ====== */
-function computeSwasta(){
-  const ITKA = parseFloat(document.getElementById('elaun_itka_sw').value) || 0;
-  const ITP  = parseFloat(document.getElementById('elaun_itp_sw').value) || 0;
-  const BISH = parseFloat(document.getElementById('elaun_bish_sw').value) || 0;
-  const BIPK = parseFloat(document.getElementById('elaun_bipk_sw').value) || 0;
-  const totalElaun = ITKA + ITP + BISH + BIPK;
-  
-  let totalFloorYears = 0;
-  let details = [];
-
-  for(let i=1;i<=4;i++){
-    const org = document.getElementById(`exp_org_${i}`).value || '-';
-    const s = document.getElementById(`exp_start_${i}`).value;
-    const e = document.getElementById(`exp_end_${i}`).value;
-
-    const days = daysBetween(s,e);
-    const years = days / 365;
-    const floorY = Math.floor(years);
-    totalFloorYears += floorY;
-
-    details.push({i, org, days, years, floorY});
-  }
-
-  const gajiPermulaan = 1974; // tetap
-  const pgtPerYear = 145;
-  const jumlahPGTLayak = totalFloorYears * pgtPerYear;
-  const gajiDitawar = gajiPermulaan + jumlahPGTLayak;
-  const kasar = gajiDitawar + totalElaun;
-
-  const rc = document.getElementById('resultContent');
-  rc.innerHTML = '';
-
-  rc.innerHTML += `<div class="item"><div class="label">Jawatan</div><div class="value">${document.getElementById('swastaJawatan').value || '-'}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi Kini</div><div class="value">${document.getElementById('swastaNamaOrganisasi').value || '-'}</div></div>`;
-
-  details.forEach(d=>{
-    rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi ${d.i}</div><div class="value">${d.org}</div></div>`;
-    rc.innerHTML += `<div class="item"><div class="label">Pengalaman ${d.i} (hari)</div><div class="value">${d.days}</div></div>`;
-    rc.innerHTML += `<div class="item"><div class="label">Tahun (sebenar)</div><div class="value">${d.years.toFixed(2)}</div></div>`;
-    rc.innerHTML += `<div class="item"><div class="label">Boleh Ambil Kira (tahun)</div><div class="value">${d.floorY}</div></div>`;
-  });
-
-  rc.innerHTML += `<div class="item"><div class="label">Keseluruhan Tahun (boleh kira)</div><div class="value">${totalFloorYears}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Jumlah PGT Layak</div><div class="value">RM ${jumlahPGTLayak.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Gaji Permulaan</div><div class="value">RM ${gajiPermulaan.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Gaji Ditawar</div><div class="value">RM ${gajiDitawar.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="item"><div class="label">Jumlah Elaun (ITKA+ITP+BISH+BIPK)</div><div class="value">RM ${totalElaun.toFixed(2)}</div></div>`;
-  rc.innerHTML += `<div class="total"><div>Jumlah Pendapatan Kasar</div><div>RM ${kasar.toFixed(2)}</div></div>`;
-
-  document.querySelector('.result').scrollIntoView({behavior:'smooth', block:'center'});
-}
-
-document.addEventListener("DOMContentLoaded", function() {
-  const goTopBtn = document.getElementById("goTopBtn");
-
-  // pantau scroll pada window
-  window.addEventListener("scroll", function() {
-    if (window.scrollY > 200) {  // bila scroll lebih 200px
-      goTopBtn.style.display = "block";
-    } else {
-      goTopBtn.style.display = "none";
-    }
-  });
-
-  // klik → scroll smooth ke atas
-  goTopBtn.addEventListener("click", function() {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  });
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        window.scrollTo(0, 0);
+    }, 10);
 });
 
-window.addEventListener('load', () => {
-  window.scrollTo(0, 0);
-});
+        // Data jawatan awam dengan ITK baru
+        const jawatanAwam = {
+            "Juruteknik Perubatan U1": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 100,
+                KGT_tambahan: 100,
+                elaun: { ITKA: 115, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Pembantu Perawatan Kesihatan U1": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 100,
+                KGT_tambahan: 100,
+                elaun: { ITKA: 115, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Pembantu Pembedahan Pergigian U1": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 100,
+                KGT_tambahan: 100,
+                elaun: { ITKA: 115, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Penolong Pegawai Kesihatan Persekitaran U5": {
+                gajiPokok: 1400,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 90,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 150, BIP: 0 }
+            },
+            "Juruteknologi Makmal Perubatan U5": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Penolong Pegawai Farmasi U5": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Juru X-Tray U5": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Jurupulih Perubatan U5 - Diploma Fisioterapi": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Jurupulih Perubatan U5 - DLKM": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Penolong Pegawai Perubatan U5": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 0, BIP: 0 }
+            },
+            "Jururawat U5": {
+                gajiPokok: 2100,
+                KGT_tahun_ini: 145,
+                KGT_tambahan: 145,
+                elaun: { ITKA: 160, ITK: 0, ITP: 300, BISH: 300, BIPK: 150, BIP: 0 }
+            },
+            "Penolong Pegawai Perubatan U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 165, BIP: 0 }
+            },
+            "Pegawai kesihatan Persekitaran U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 0, BIP: 0 }
+            },
+            "Pegawai Pemulihan Perubatan U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 0, BIP: 0 }
+            },
+            "Pegawai Dietetik U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 0, BIP: 0 }
+            },
+            "Pegawai Optometri U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 0, BIP: 0 }
+            },
+            "Juru X-Tray U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 0, BIP: 0 }
+            },
+            "Jururawat U9": {
+                gajiPokok: 2580,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 165, BIP: 0 }
+            },
+            "Pegawai Farmasi U9": {
+                gajiPokok: 2910,
+                KGT_tahun_ini: 0,
+                KGT_tambahan: 0,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 750, BIP: 0 }
+            },
+            "Pegawai Pergigian UG9": {
+                gajiPokok: 3020,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 300, ITK: 0, ITP: 300, BISH: 250, BIPK: 750, BIP: 0 }
+            },
+            "Pegawai Perubatan UD10": {
+                gajiPokok: 3840,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 400, ITP: 400, BISH: 250, BIPK: 750, BIP: 0 }
+            },
+            "Pegawai Perubatan UD12": {
+                gajiPokok: 5530,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 550, ITP: 700, BISH: 250, BIPK: 750, BIP: 0 }
+            },
+            "Pegawai Perubatan UD13": {
+                gajiPokok: 6210,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 600, ITP: 700, BISH: 250, BIPK: 750, BIP: 2500 }
+            },
+            "Pegawai Perubatan UD14": {
+                gajiPokok: 6560,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 800, ITP: 900, BISH: 250, BIPK: 750, BIP: 2800 }
+            },
+            "Pegawai Perubatan Pakar UD13": {
+                gajiPokok: 6210,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 600, ITP: 700, BISH: 250, BIPK: 750, BIP: 2500 }
+            },
+            "Pegawai Perubatan Pakar UD14": {
+                gajiPokok: 6560,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 800, ITP: 900, BISH: 250, BIPK: 750, BIP: 2800 }
+            },
+            "Pegawai Perubatan Pakar UD15": {
+                gajiPokok: 7030,
+                KGT_tahun_ini: 155,
+                KGT_tambahan: 155,
+                elaun: { ITKA: 0, ITK: 2100, ITP: 1100, BISH: 250, BIPK: 750, BIP: 3000 }
+            }
+        };
 
+        // Dropdown change
+        const dropdown = document.getElementById("jawatan_awam");
+        dropdown.addEventListener("change", function () {
+            const val = this.value;
+            if (jawatanAwam[val]) {
+                const data = jawatanAwam[val];
 
-  // paparkan disclaimer
-  document.getElementById('swastaDisclaimer').style.display = 'block';
-  document.querySelector('.result').scrollIntoView({behavior:'smooth', block:'center'});
-  
+                document.getElementById('awamJawatan').value = val;
+                document.getElementById('awamGajiPokok').value = data.gajiPokok;
 
-/* initial selection */
-selectMode('awam');
-</script>
+                document.getElementById('kgt_tahun_ini').value = data.KGT_tahun_ini;
+                document.getElementById('kgt_tambahan').value = data.KGT_tambahan;
 
-<button id="goTopBtn" title="Go to Top">↑</button>
+                document.getElementById('elaun_itka_awam').value = data.elaun.ITKA;
+                document.getElementById('elaun_itk_awam').value = data.elaun.ITK;
+                document.getElementById('elaun_itp_awam').value = data.elaun.ITP;
+                document.getElementById('elaun_bish_awam').value = data.elaun.BISH;
+                document.getElementById('elaun_bipk_awam').value = data.elaun.BIPK;
+                document.getElementById('elaun_bip_awam').value = data.elaun.BIP;
+            }
+        });
+
+        // Kiraan gaji Awam
+        function computeAwam() {
+            const jawatan = document.getElementById('awamJawatan').value;
+            if (!jawatan) { alert("Sila pilih jawatan terlebih dahulu"); return; }
+
+            const gajiPokok = parseFloat(document.getElementById('awamGajiPokok').value) || 0;
+            const kgtTahunIni = parseFloat(document.getElementById('kgt_tahun_ini').value) || 0;
+            const kgtTambahan = parseFloat(document.getElementById('kgt_tambahan').value) || 0;
+
+            const telahTerima = document.getElementById('awamTelah').value;
+            const bulanPGT = document.getElementById('awamPGT').value;
+
+            let nilaiKGT_tahun_ini = 0;
+            if (telahTerima === "TIDAK") nilaiKGT_tahun_ini = kgtTahunIni;
+
+            const ITKA = parseFloat(document.getElementById('elaun_itka_awam').value) || 0;
+            const ITK = parseFloat(document.getElementById('elaun_itk_awam').value) || 0;
+            const ITP = parseFloat(document.getElementById('elaun_itp_awam').value) || 0;
+            const BISH = parseFloat(document.getElementById('elaun_bish_awam').value) || 0;
+            const BIPK = parseFloat(document.getElementById('elaun_bipk_awam').value) || 0;
+            const BIP = parseFloat(document.getElementById('elaun_bip_awam').value) || 0;
+
+            const totalElaun = ITKA + ITK + ITP + BISH + BIPK + BIP;
+            const gajiLepasKGT = gajiPokok + nilaiKGT_tahun_ini + kgtTambahan;
+            const kasar = gajiLepasKGT + totalElaun;
+
+            document.getElementById("resultContent").innerHTML = `
+    <div class="item"><div class="label">Jawatan</div><div class="value">${jawatan}</div></div>
+    <div class="item"><div class="label">Status PGT</div><div class="value">${telahTerima}</div></div>
+    <div class="item"><div class="label">Tarikh PGT</div><div class="value">${bulanPGT}</div></div>
+    <div class="item"><div class="label">Gaji Pokok</div><div class="value">RM ${gajiPokok.toFixed(2)}</div></div>
+    <div class="item"><div class="label">KGT Tahun Ini</div><div class="value">RM ${nilaiKGT_tahun_ini.toFixed(2)}</div></div>
+    <div class="item"><div class="label">KGT Tambahan</div><div class="value">RM ${kgtTambahan.toFixed(2)}</div></div>
+    <div class="item"><div class="label">Jumlah Elaun</div><div class="value">RM ${totalElaun.toFixed(2)}</div></div>
+    <div class="item"><div class="label">ITKA</div><div class="value">RM ${ITKA.toFixed(2)}</div></div>
+    <div class="item"><div class="label">ITK</div><div class="value">RM ${ITK.toFixed(2)}</div></div>
+    <div class="item"><div class="label">ITP</div><div class="value">RM ${ITP.toFixed(2)}</div></div>
+    <div class="item"><div class="label">BISH / BIW</div><div class="value">RM ${BISH.toFixed(2)}</div></div>
+    <div class="item"><div class="label">BIPK</div><div class="value">RM ${BIPK.toFixed(2)}</div></div>
+    <div class="item"><div class="label">BIP</div><div class="value">RM ${BIP.toFixed(2)}</div></div>
+
+    <div class="total">
+        <div>Jumlah Pendapatan Kasar</div>
+        <div>RM ${kasar.toFixed(2)}</div>
+    </div>
+  `;
+            document.querySelector('.result').scrollIntoView({ behavior: 'smooth', block: 'center' });
+        }
+
+        /* ===== Go Top Button ===== */
+        document.addEventListener("DOMContentLoaded", function () {
+            const goTopBtn = document.getElementById("goTopBtn");
+            window.addEventListener("scroll", function () {
+                goTopBtn.style.display = window.scrollY > 200 ? "block" : "none";
+            });
+            goTopBtn.addEventListener("click", () => window.scrollTo({ top: 0, behavior: 'smooth' }));
+        });
+    </script>
+
+    <button id="goTopBtn" title="Go to Top">↑</button>
 
 </body>
 </html>
