@@ -45,11 +45,11 @@
       </tr>
       <tr>
         <td class="left-col">BISH</td>
-        <td class="right-col">BANTUAN INSENTIF SARA HIDUP</td>
+        <td class="right-col">BANTUAN INSENTIF SARA HIDUP (Semenanjung)</td>
       </tr>
       <tr>
         <td class="left-col">BIW</td>
-        <td class="right-col">BANTUAN INSENTIF WILAYAH</td>
+        <td class="right-col">BANTUAN INSENTIF WILAYAH (Sabah/Sarawak)</td>
       </tr>
       <tr>
         <td class="left-col">BIPK</td>
@@ -62,117 +62,145 @@
     </table>
 </div>
 
-
 <div class="main">
 <div class="panel">    
 <!-- Kotak Penerangan / Info -->
 <div class="info-box">
   <h3>Panduan Kiraan</h3>
   <p><strong>Kiraan Awam:</strong> Isikan Jawatan Kini, Jabatan Kini, Gaji Pokok, dan pilih sama ada telah terima PGT tahun ini atau tidak. Elaun adalah tetap dan tidak boleh diubah. Tekan butang <em>KIRA GAJI AWAM</em> untuk melihat hasil.</p>
-  <p><strong>Kiraan Swasta:</strong> Isikan Jawatan dan tempoh pengalaman (Tarikh Mula & Tamat). Sistem akan kira tempoh hari → tahun → 'Boleh Ambil Kira' secara automatik. Gaji Permulaan ditambah dengan PGT layak dan Elaun tetap. Tekan butang <em>KIRA GAJI SWASTA</em> untuk lihat hasil.</p>
+  <p><strong>Kiraan Swasta:</strong> Isikan Jawatan dan tempoh pengalaman (Tarikh Mula & Tamat). Sistem akan kira tempoh hari → tahun → 'Boleh Ambil Kira' secara automatik. Gaji Permulaan ditambah dengan KGT layak dan Elaun tetap. Tekan butang <em>KIRA GAJI SWASTA</em> untuk lihat hasil.</p>
 </div>
-    <!-- Dropdown Jawatan -->
-    <center>
-      <div class="dropdown-wrapper">
-        <label>Pilih Jawatan Swasta</label>
-        <div class="custom-dropdown">
-          <select id="jawatan_swasta">
-            <option value="">Pilih Jawatan Swasta</option>
-            <option value="Juruteknik Perubatan U1">JURUTEKNIK PERUBATAN U1</option>
-            <option value="Pembantu Perawatan Kesihatan U1">PEMBANTU PERAWATAN KESIHATAN U1</option>
-            <option value="Pembantu Pembedahan Pergigian U1">PEMBANTU PEMBEDAHAN PERGIGIAN U1</option>
-            <option value="Penolong Pegawai Kesihatan Persekitaran U5">PENOLONG PEGAWAI KESIHATAN PERSEKITARAN U5</option>
-            <option value="Juruteknologi Makmal Perubatan U5">JURUTEKNOLOGI MAKMAL PERTUBATAN U5</option>
-            <option value="Penolong Pegawai Farmasi U5">PENOLONG PEGAWAI FARMASI U5</option> 
-            <option value="Juru X-Ray U5">JURU X-RAY U5</option>
-            <option value="Jurupulih Perubatan U5 - Diploma Fisioterapi">JURUPULIH PERUBATAN U5 - DIPLOMA FISIOTERAPI</option>
-            <option value="Jurupulih Perubatan U5 - DLKM">JURUPULIH PERUBATAN U5 - DLKM</option>
-            <option value="Jurupulih Perubatan U5 - DKM">JURUPULIH PERUBATAN U5 - DKM</option>
-            <option value="Penolong Pegawai Perubatan U5">PENOLONG PEGAWAI PERUBATAN U5</option>
-            <option value="Jururawat U5">JURURAWAT U5</option>
-            <option value="Penolong Pegawai Perubatan U9">PENOLONG PEGAWAI PERUBATAN U9</option>
-            <option value="Pegawai Kesihatan Persekitaran U9">PEGAWAI KESIHATAN PERSEKITARAN U9</option>
-            <option value="Pegawai Pemulihan Perubatan U9">PEGAWAI PEMULIHAN PERUBATAN U9</option>
-            <option value="Pegawai Dietetik U9">PEGAWAI DIETETIK U9</option>
-            <option value="Pegawai Optometri U9">PEGAWAI OPTOMETRI U9</option>
-            <option value="Juru X-Ray U9">JURU X-RAY U9</option>
-           <option value="Jururawat U9">JURURAWAT U9</option>
-           <option value="Pegawai Farmasi UF9">PEGAWAI FARMASI UF9</option>
-           <option value="Pegawai Pergigian UG9">PEGAWAI PERGIGIAN UG9</option>
-           <option value="Pegawai Perubatan UD10">PEGAWAI PERUBATAN UD10</option>
-           <option value="Pegawai Perubatan UD12">PEGAWAI PERUBATAN UD12</option>
-           <option value="Pegawai Perubatan UD13">PEGAWAI PERUBATAN UD13</option>
-           <option value="Pegawai Perubatan UD14">PEGAWAI PERUBATAN UD14</option>
-           <option value="Pegawai Perubatan Pakar UD13">PEGAWAI PERUBATAN PAKAR UD13</option>
-           <option value="Pegawai Perubatan Pakar UD14">PEGAWAI PERUBATAN PAKAR UD14</option>
-           <option value="Pegawai Perubatan Pakar UD15">PEGAWAI PERUBATAN PAKAR UD15</option>
-          </select>
-        </div>
-      </div>
-    </center>
-<br>
-    <!-- Maklumat Calon -->
-    <div class="h3" style="margin-top:10px">Maklumat Calon</div>
-    <div class="row">
-      <div class="col">
-        <label>Jawatan</label>
-        <input type="text" id="swastaJawatan" placeholder="Contoh: Jururawat" readonly>
-      </div>
-      <div class="col">
-        <label>Nama Organisasi Kini</label>
-        <input type="text" id="swastaNamaOrganisasi" placeholder="Contoh: Hospital Selayang">
-      </div>
-    </div>
 
-    <!-- Experience blocks -->
-    <div class="small" style="margin-top:10px">
-      Isi sehingga 4 pengalaman. Sistem akan kira tempoh hari → tahun → Boleh Ambil Kira.
+<!-- Dropdown Jawatan -->
+<center>
+  <div class="dropdown-wrapper">
+    <label>Pilih Jawatan Swasta</label>
+    <div class="custom-dropdown">
+      <select id="jawatan_swasta">
+                <option value="" disabled selected class="placeholder">Pilih Jawatan Swasta</option>
+                <option value="Juruteknik Perubatan U1">JURUTEKNIK PERUBATAN U1</option>
+                <option value="Pembantu Perawatan Kesihatan U1">PEMBANTU PEMBEDAHAN PERGIGIAN U1</option>
+                <option value="Pembantu Pembedahan Pergigian U1">PEMBANTU PEMBEDAHAN PERGIGIAN U1</option>
+                <option value="Penolong Pegawai Kesihatan Persekitaran U5">PENOLONG PEGAWAI KESIHATAN PERSEKITARAN U5</option>
+                <option value="Juruteknologi Makmal Perubatan U5">JURUTEKNOLOGI MAKMAL PERUBATAN U5</option>
+                <option value="Penolong Pegawai Farmasi U5">PENOLONG PEGAWAI FARMASI U5</option>
+                <option value="Juru X-Tray U5">JURU X-TRAY U5</option>
+                <option value="Jurupulih Perubatan U5 - Diploma Fisioterapi">JURUPULIH PERUBATAN U5 - DIPLOMA FISIOTERAPI</option>
+                <option value="Jurupulih Perubatan U5 - DLKM">JURUPULIH PERUBATAN U5 - DLKM</option>
+                <option value="Jurupulih Perubatan U5 - DKM">JURUPULIH PERUBATAN U5 - DKM</option>
+                <option value="Penolong Pegawai Perubatan U5">PENOLONG PEGAWAI PERUBATAN U5</option>
+                <option value="Jururawat U5">JURURAWAT U5</option>
+                <option value="Penolong Pegawai Perubatan U9">PENOLONG PEGAWAI PERUBATAN U9</option>
+                <option value="Pegawai kesihatan Persekitaran U9">PEGAWAI KESIHATAN PERSEKITARAN U9</option>
+                <option value="Pegawai Pemulihan Perubatan U9">PEGAWAI PEMULIHAN PERUBATAN U9</option>
+                <option value="Pegawai Dietetik U9">PEGAWAI DIETETIK U9</option>
+                <option value="Pegawai Optometri U9">PEGAWAI OPTOMETRI U9</option>
+                <option value="Juru X-Tray U9">JURU X-RAY U9</option>
+                <option value="Jururawat U9">JURURAWAT U9</option>
+                <option value="Pegawai Farmasi U9">PEGAWAI FARMASI U9</option>
+                <option value="Pegawai Pergigian UG9">PEGAWAI PERGIGIAN UG9</option>
+                <option value="Pegawai Perubatan UD10">PEGAWAI PERUBATAN UD10</option>
+                <option value="Pegawai Perubatan UD12">PEGAWAI PERUBATAN UD12</option>
+                <option value="Pegawai Perubatan UD13">PEGAWAI PERUBATAN UD13</option>
+                <option value="Pegawai Perubatan UD14">PEGAWAI PERUBATAN UD14</option>
+                <option value="Pegawai Perubatan Pakar UD13">PEGAWAI PERUBATAN Pakar UD13</option>
+                <option value="Pegawai Perubatan Pakar UD14">PEGAWAI PERUBATAN Pakar UD14</option>
+                <option value="Pegawai Perubatan Pakar UD15">PEGAWAI PERUBATAN Pakar UD15</option>
+      </select>
     </div>
-    <div id="expList" style="margin-top:12px"></div>
-
-    <!-- Elaun -->
-    <div class="h3" style="margin-top:10px">Elaun</div>
-    <div class="row">
-      <div class="col">
-        <label>ITKA</label>
-        <input type="number" id="elaun_itka_sw" value="160" readonly>
-      </div>
-      <div class="col">
-        <label>ITK</label>
-        <input type="number" id="elaun_itk_sw" value="0" readonly>
-      </div>
-    </div>
-    <div class="row" style="margin-top:6px">
-      <div class="col">
-        <label>ITP</label>
-        <input type="number" id="elaun_itp_sw" value="300" readonly>
-      </div>
-      <div class="col">
-        <label>BISH</label>
-        <input type="number" id="elaun_bish_sw" value="300" readonly>
-      </div>
-    </div>
-    <div class="row" style="margin-top:6px">
-      <div class="col">
-        <label>BIPK</label>
-        <input type="number" id="elaun_bipk_sw" value="150" readonly>
-      </div>
-      <div class="col">
-        <label>BIP</label>
-        <input type="number" id="elaun_bip_sw" value="0" readonly>
-      </div>
-    </div>
-
-    <button class="btn" onclick="computeSwasta()">KIRA GAJI SWASTA</button>
-
   </div>
-  <br>
+</center>
+
+<!-- Dropdown Wilayah -->
+<center>
+  <div class="dropdown-wrapper" style="margin-top:10px;">
+    <label>Wilayah Asal Pemohon</label>
+    <div class="custom-dropdown">
+      <select id="wilayahPemohon">
+        <option value="" disabled selected class="placeholder">Pilih Wilayah Asal Pemohon</option>
+        <option value="Semenanjung">Semenanjung</option>
+        <option value="Sabah">Sabah</option>
+        <option value="Sarawak">Sarawak</option>
+      </select>
+    </div>
+  </div>
+</center>
+
+<center>
+<!-- Kategori Jawatan -->
+<div class="dropdown-wrapper" style="margin-top:10px;">
+  <label>Kategori Jawatan</label>
+  <input type="text" id="kategoriJawatan" readonly>
+</div></center>
+
+<!-- Maklumat Calon -->
+<div class="h3" style="margin-top:10px">Maklumat Calon</div>
+<div class="row">
+  <div class="col">
+    <label>Jawatan</label>
+    <input type="text" id="swastaJawatan" placeholder="Contoh: Jururawat" readonly>
+  </div>
+  <div class="col">
+    <label>Nama Organisasi Kini</label>
+    <input type="text" id="swastaNamaOrganisasi" placeholder="Contoh: Hospital Selayang">
+  </div>
+</div>
+
+<!-- Experience blocks -->
+<div class="small" style="margin-top:10px">
+  Isi sehingga 4 pengalaman. Sistem akan kira tempoh hari → tahun → Boleh Ambil Kira.
+</div>
+<div id="expList" style="margin-top:12px"></div>
+
+<!-- Elaun -->
+<div class="h3" style="margin-top:10px">Elaun</div>
+<div class="row">
+  <div class="col">
+    <label>ITKA</label>
+    <input type="number" id="elaun_itka_sw" readonly>
+  </div>
+  <div class="col">
+    <label>ITK</label>
+    <input type="number" id="elaun_itk_sw" readonly>
+  </div>
+</div>
+<div class="row" style="margin-top:6px">
+  <div class="col">
+    <label>ITP</label>
+    <input type="number" id="elaun_itp_sw" readonly>
+  </div>
+  <div class="col">
+    <label>BISH</label>
+    <input type="number" id="elaun_bish_sw" readonly>
+  </div>
+</div>
+<div class="row" style="margin-top:6px">
+  <div class="col">
+    <label>BIW</label>
+    <input type="number" id="elaun_biw_sw" readonly>
+  </div>
+  <div class="col">
+    <label>BIPK</label>
+    <input type="number" id="elaun_bipk_sw" readonly>
+  </div>
+</div>
+<div class="row" style="margin-top:6px">
+  <div class="col">
+    <label>BIP</label>
+    <input type="number" id="elaun_bip_sw" readonly>
+  </div>
+</div>
+
+<button class="btn" onclick="computeSwasta()">KIRA GAJI SWASTA</button>
+</div>
+
+<br>
 <!-- RIGHT: Result -->
     <div class="result panel">
 <center><div class="result-title-box">
     Ringkasan Keputusan
     </div></center>
-            <div id="resultContent">
+<center>   <div id="resultContent">
                 <div id="disclaimer" class="info-box small" style="margin-top:10px;">
                     <strong>PERHATIAN:</strong> Jumlah yang dipaparkan hanyalah sebagai rujukan dan panduan sahaja.
                     Ketetapan sebenar adalah berdasarkan semakan dokumen dan pertimbangan pihak UiTM.
@@ -187,186 +215,320 @@
   </div>
 </footer>
 
-
-
-
 <script>
-window.addEventListener("load", () => {
-    setTimeout(() => {
-        window.scrollTo(0, 0);
-    }, 10);
-});
+window.addEventListener("load", () => { setTimeout(() => { window.scrollTo(0, 0); }, 10); });
 
 /* ===== Data jawatan Swasta ===== */
 const jawatanSwasta = {
-  "Juruteknik Perubatan U1": { 
+    "Juruteknik Perubatan U1": {
+    kategori: "Pelaksana (KUMP. C)",
     gajiMin: 1500,
     KGT: 100,
-    elaun:{ ITKA:115, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
+    elaun: {
+    "Semenanjung": { ITKA:115, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+    "Sabah": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+    "Sarawak": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+         }
   },
 
-  "Pembantu Perawatan Kesihatan U1": { 
-    gajiMin: 1500,
-    KGT: 100,
-    elaun:{ ITKA:115, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
+  "Pembantu Perawatan Kesihatan U1": {
+  kategori: "Pelaksana (KUMP. C)",
+  gajiMin: 1500,
+  KGT: 100,
+  elaun: {
+  "Semenanjung": { ITKA:115, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Pembantu Pembedahan Pergigian U1": { 
-    gajiMin: 1561,
-    KGT: 100,
-    elaun:{ ITKA:115, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
+    "Pembantu Pembedahan Pergigian U1": {
+  kategori: "Pelaksana (KUMP. C)",
+  gajiMin: 1561,
+  KGT: 100,
+  elaun: {
+  "Semenanjung": { ITKA:115, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Penolong Pegawai Kesihatan Persekitaran U5": { 
-    gajiMin: 1300,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:150, BIP:0 } 
+    "Penolong Pegawai Kesihatan Persekitaran U5": {
+  kategori: "Pelaksana (KUMP. C)",
+  gajiMin: 1500,
+  KGT: 100,
+  elaun: {
+  "Semenanjung": { ITKA:115, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:115, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Juruteknologi Makmal Perubatan U5": { 
-    gajiMin: 1974,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
- },
-
-  "Penolong Pegawai Farmasi U5": { 
-    gajiMin: 1974,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
-
+    "Juruteknologi Makmal Perubatan U5": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1974,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Juru X-Ray U5": { 
-    gajiMin: 1974,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
+    "Penolong Pegawai Farmasi U5": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1974,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Jurupulih Perubatan U5 - Diploma Fisioterapi": { 
-    gajiMin: 1974,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
+    "Juru X-Ray U5": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1974,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Jurupulih Perubatan U5 - DLKM": { 
-    gajiMin: 1812,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
- },
-
-  "Jurupulih Perubatan U5 - DKM": { 
-    gajiMin: 1812,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:0, BIP:0 } 
- },
-
-  "Penolong Pegawai Perubatan U5": { 
-    gajiMin: 1974,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:150, BIP:0 } 
- },
-
-  "Jururawat U5": { 
-    gajiMin: 1974,
-    KGT: 145,
-    elaun:{ ITKA:160, ITK:0, ITP:300, BISH:300, BIPK:150, BIP:0 }
- },
-
-  "Penolong Pegawai Perubatan U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:165, BIP:0 }
- },
-
-  "Pegawai Kesihatan Persekitaran U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:0, BIP:0 }
+    "Jurupulih Perubatan U5 - Diploma Fisioterapi": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1974,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Pegawai Pemulihan Perubatan U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:0, BIP:0 }
+    "Jurupulih Perubatan U5 - DLKM": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1812,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Pegawai Dietetik U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:0, BIP:0 }
+    "Jurupulih Perubatan U5 - DKM": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1731,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:1, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:0, BIP:0 }
+        }
   },
 
-  "Pegawai Optometri U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:0, BIP:0 }
-},
+    "Penolong Pegawai Perubatan U5": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1974,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:150, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:150, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:150, BIP:0 }
+        }
+  },
 
-  "Juru X-Ray U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:0, BIP:0 }
-},
+    "Jururawat U5": {
+  kategori: "Pelaksana (KUMP. B)",
+  gajiMin: 1974,
+  KGT: 145,
+  elaun: {
+  "Semenanjung": { ITKA:160, ITK:0, ITP:300, BISH:300, BIW:0, BIPK:150, BIP:0 },
+  "Sabah": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:150, BIP:0 },
+  "Sarawak": { ITKA:160, ITK:0, ITP:300, BISH:0, BIW:300, BIPK:150, BIP:0 }
+        }
+  },
 
-  "Jururawat U9": { 
-    gajiMin: 2580,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:165, BIP:0 }
-},
+    "Penolong Pegawai Perubatan U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:165, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:165, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:165, BIP:0 }
+        }
+  },
 
-  "Pegawai Farmasi UF9": { 
-    gajiMin: 2910,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:750, BIP:0 }
-},
+    "Pegawai Kesihatan Persekitaran U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 }
+        }
+  },
 
-  "Pegawai Pergigian UG9": { 
-    gajiMin: 3020,
-    KGT: 225,
-    elaun:{ ITKA:300, ITK:0, ITP:300, BISH:250, BIPK:750, BIP:0 }
-},
+    "Pegawai Pemulihan Perubatan U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan UD10": { 
-    gajiMin: 3840,
-    KGT: 250,
-    elaun:{ ITKA:0, ITK:400, ITP:400, BISH:250, BIPK:750, BIP:0 }
-},
+    "Pegawai Dietetik U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan UD12": { 
-    gajiMin: 5530,
-    KGT: 270,
-    elaun:{ ITKA:0, ITK:550, ITP:700, BISH:250, BIPK:750, BIP:0 }
-},
+    "Pegawai Optometri U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan UD13": { 
-    gajiMin: 6210,
-    KGT: 290,
-    elaun:{ ITKA:0, ITK:600, ITP:700, BISH:250, BIPK:750, BIP:0 } 
-},
+    "Juru X-Tray U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:0, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:0, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan UD14": { 
-    gajiMin: 6560,
-    KGT: 320,
-    elaun:{ ITKA:0, ITK:800, ITP:900, BISH:900, BIPK:750, BIP:0 } 
-},
+    "Jururawat U9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2580,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:165, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:165, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:165, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan Pakar UD13": { 
-    gajiMin: 6210,
-    KGT: 290,
-    elaun:{ ITKA:0, ITK:600, ITP:700, BISH:250, BIPK:750, BIP:2500 }
-},
+    "Pegawai Farmasi UF9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 2910,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:750, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:750, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:750, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan Pakar UD14": { 
-    gajiMin: 6560,
-    KGT: 320,
-    elaun:{ ITKA:0, ITK:800, ITP:900, BISH:250, BIPK:750, BIP:2800 } 
-},
+    "Pegawai Pergigian UG9": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 3020,
+  KGT: 225,
+  elaun: {
+  "Semenanjung": { ITKA:300, ITK:0, ITP:300, BISH:250, BIW:0, BIPK:750, BIP:0 },
+  "Sabah": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:750, BIP:0 },
+  "Sarawak": { ITKA:300, ITK:0, ITP:300, BISH:0, BIW:360, BIPK:750, BIP:0 }
+        }
+  },
 
-  "Pegawai Perubatan Pakar UD15": { 
-    gajiMin: 7030,
-    KGT: 400,
-    elaun:{ ITKA:0, ITK:2100, ITP:1100, BISH:250, BIPK:750, BIP:3000 } 
-  }
+    "Pegawai Perubatan UD10": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 3840,
+  KGT: 250,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:400, ITP:400, BISH:250, BIW:0, BIPK:750, BIP:0 },
+  "Sabah": { ITKA:0, ITK:400, ITP:400, BISH:0, BIW:360, BIPK:750, BIP:0 },
+  "Sarawak": { ITKA:0, ITK:400, ITP:400, BISH:0, BIW:360, BIPK:750, BIP:0 }
+        }
+  },
+
+    "Pegawai Perubatan UD12": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 5530,
+  KGT: 270,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:550, ITP:700, BISH:250, BIW:0, BIPK:750, BIP:0 },
+  "Sabah": { ITKA:0, ITK:550, ITP:700, BISH:0, BIW:360, BIPK:750, BIP:0 },
+  "Sarawak": { ITKA:0, ITK:550, ITP:700, BISH:0, BIW:360, BIPK:750, BIP:0 }
+        }
+  },
+
+    "Pegawai Perubatan UD13": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 6210,
+  KGT: 290,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:600, ITP:700, BISH:250, BIW:0, BIPK:750, BIP:0 },
+  "Sabah": { ITKA:0, ITK:600, ITP:700, BISH:0, BIW:360, BIPK:750, BIP:0 },
+  "Sarawak": { ITKA:0, ITK:600, ITP:700, BISH:0, BIW:360, BIPK:750, BIP:0 }
+        }
+  },
+
+    "Pegawai Perubatan UD14": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 6560,
+  KGT: 320,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:800, ITP:900, BISH:250, BIW:0, BIPK:750, BIP:0 },
+  "Sabah": { ITKA:0, ITK:800, ITP:900, BISH:0, BIW:360, BIPK:750, BIP:0 },
+  "Sarawak": { ITKA:0, ITK:800, ITP:900, BISH:0, BIW:360, BIPK:750, BIP:0 }
+        }
+  },
+
+    "Pegawai Perubatan Pakar UD13": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 6210,
+  KGT: 290,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:600, ITP:700, BISH:250, BIW:0, BIPK:750, BIP:2500 },
+  "Sabah": { ITKA:0, ITK:600, ITP:700, BISH:0, BIW:360, BIPK:750, BIP:2500 },
+  "Sarawak": { ITKA:0, ITK:600, ITP:700, BISH:0, BIW:360, BIPK:750, BIP:2500 }
+        }
+  },
+
+    "Pegawai Perubatan Pakar UD14": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 6560,
+  KGT: 320,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:800, ITP:900, BISH:250, BIW:0, BIPK:750, BIP:2800 },
+  "Sabah": { ITKA:0, ITK:800, ITP:900, BISH:0, BIW:360, BIPK:750, BIP:2800 },
+  "Sarawak": { ITKA:0, ITK:800, ITP:900, BISH:0, BIW:360, BIPK:750, BIP:2800 }
+        }
+  },
+
+      "Pegawai Perubatan Pakar UD15": {
+  kategori: "PENGURUSAN & PROFESIONAL",
+  gajiMin: 7030,
+  KGT: 400,
+  elaun: {
+  "Semenanjung": { ITKA:0, ITK:2100, ITP:1100, BISH:250, BIW:0, BIPK:750, BIP:3000 },
+  "Sabah": { ITKA:0, ITK:2100, ITP:1100, BISH:0, BIW:360, BIPK:750, BIP:3000 },
+  "Sarawak": { ITKA:0, ITK:2100, ITP:1100, BISH:0, BIW:360, BIPK:750, BIP:3000 }
+        }
+  },
+
+
 };
 
 /* ===== Create experience blocks ===== */
@@ -429,35 +591,47 @@ function updateExpPreview(i){
   document.getElementById(`exp_floor_${i}`).textContent = Math.floor(years);
 }
 
-/* ===== Dropdown change ===== */
+/* ===== Update elaun ikut wilayah ===== */
 const selectSw = document.getElementById('jawatan_swasta');
+const wilayahSelect = document.getElementById('wilayahPemohon');
+
+function updateElaun(){
+  const val = selectSw.value;
+  const wilayah = wilayahSelect.value || 'Semenanjung';
+  if(jawatanSwasta[val]){
+    const elaunWilayah = jawatanSwasta[val].elaun[wilayah] || {};
+    for(let key in elaunWilayah){
+      const el = document.getElementById(`elaun_${key.toLowerCase()}_sw`);
+      if(el) el.value = elaunWilayah[key];
+    }
+  }
+}
+
 selectSw.addEventListener('change', ()=>{
   const val = selectSw.value;
   if(jawatanSwasta[val]){
     document.getElementById('swastaJawatan').value = val;
-
-    // update elaun inputs
-    const elauns = jawatanSwasta[val].elaun;
-    for(let key in elauns){
-      const el = document.getElementById(`elaun_${key.toLowerCase()}_sw`);
-      if(el) el.value = elauns[key];
-    }
+    document.getElementById('kategoriJawatan').value = jawatanSwasta[val].kategori || '-';
+    updateElaun();
   }
 });
+
+wilayahSelect.addEventListener('change', ()=> updateElaun());
 
 /* ===== Compute Gaji Swasta ===== */
 function computeSwasta(){
   const val = document.getElementById('swastaJawatan').value;
   if(!val || !jawatanSwasta[val]) { alert("Sila pilih jawatan"); return; }
 
-  const elaunObj = jawatanSwasta[val].elaun;
+  const elaunObj = jawatanSwasta[val].elaun[wilayahSelect.value || 'Semenanjung'];
   const ITKA = parseFloat(document.getElementById('elaun_itka_sw').value) || 0;
   const ITK  = parseFloat(document.getElementById('elaun_itk_sw').value) || 0;
   const ITP  = parseFloat(document.getElementById('elaun_itp_sw').value) || 0;
   const BISH = parseFloat(document.getElementById('elaun_bish_sw').value) || 0;
+  const BIW  = parseFloat(document.getElementById('elaun_biw_sw').value) || 0;
   const BIPK = parseFloat(document.getElementById('elaun_bipk_sw').value) || 0;
   const BIP  = parseFloat(document.getElementById('elaun_bip_sw').value) || 0;
-  const totalElaun = ITKA+ITK+ITP+BISH+BIPK+BIP;
+  const totalElaun = ITKA+ITK+ITP+BISH+BIW+BIPK+BIP;
 
   let totalFloorYears = 0;
   let details = [];
@@ -481,6 +655,7 @@ function computeSwasta(){
   const rc = document.getElementById('resultContent');
   rc.innerHTML = '';
   rc.innerHTML += `<div class="item"><div class="label">Jawatan</div><div class="value">${val}</div></div>`;
+  rc.innerHTML += `<div class="item"><div class="label">Kategori Jawatan</div><div class="value">${jawatanSwasta[val].kategori}</div></div>`;
   rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi Kini</div><div class="value">${document.getElementById('swastaNamaOrganisasi').value||'-'}</div></div>`;
   details.forEach(d=>{
     rc.innerHTML += `<div class="item"><div class="label">Nama Organisasi ${d.i}</div><div class="value">${d.org}</div></div>`;
@@ -518,5 +693,6 @@ document.getElementById("petunjukBtn").onclick = function() {
 
 
 <button id="goTopBtn" title="Go to Top">↑</button>
+
 </body>
 </html>
